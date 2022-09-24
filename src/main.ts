@@ -1,0 +1,1 @@
+import AsciinemaPlayer from './AsciinemaPlayer.svelte'
