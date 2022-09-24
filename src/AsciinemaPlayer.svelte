@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { onMount } from 'svelte'
   import * as AsciinemaPlayer from 'asciinema-player'
 
   // props
@@ -12,7 +12,7 @@
   let player: HTMLElement
 
   // TODO: not rendering new cast
-  $: () => {
+  $: (): void => {
     AsciinemaPlayer.create(castUrl, player)
   }
 
@@ -24,7 +24,7 @@
 <svelte:options tag="asciinema-player" />
 
 <!-- start of empty elements created so svelte doesn't purge the css -->
-<div class={emptyString} style="display: none;">
+<div class={emptyString} style:display="none">
   <div class={emptyString}>
     <a href="/"><div></div></a>
     <svg class={emptyString}>
