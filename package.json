@@ -12,7 +12,8 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "bump": "bumpp --push --commit 'chore(release): %s' --tag '%s'"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
@@ -21,6 +22,7 @@
     "@tsconfig/svelte": "^3.0.0",
     "@vospel/eslint-config": "^1.4.9",
     "asciinema-player": "^3.0.1",
+    "bumpp": "^8.2.1",
     "eslint": "^8.24.0",
     "postcss": "^8.4.16",
     "postcss-import": "^15.0.0",
