@@ -4,21 +4,22 @@
 
   // props
   export let src = ''
-  $: console.log(src)
-  $: castUrl = /[a-zA-Z\d]+/.test(src) ? `https://asciinema.org/a/${encodeURIComponent(src)}.cast` : (src.length === 0 ? 'https://asciinema.org/a/28307.cast' : src)
+  export let options: string | {} = {}
+
+  $: castUrl = src ? (/[a-zA-Z\d]+/.test(src) ? `https://asciinema.org/a/${encodeURIComponent(src)}.cast` : (src.length === 0 ? 'https://asciinema.org/a/28307.cast' : src)) : 'https://asciinema.org/a/28307.cast'
+
+  let playerElement: HTMLElement
+
+  onMount(async () => {
+    if (typeof options === 'string') {
+      options = JSON.parse(options)
+    }
+
+    AsciinemaPlayer.create(castUrl, playerElement, options)
+  })
 
   // Svelte purges css, so it needs to think there are dynamic classes, so this and using class={emptyString} few times should solve this
   let emptyString = ''
-  let player: HTMLElement
-
-  // TODO: not rendering new cast
-  $: (): void => {
-    AsciinemaPlayer.create(castUrl, player)
-  }
-
-  onMount(() => {
-    AsciinemaPlayer.create(castUrl, player)
-  })
 </script>
 
 <svelte:options tag="asciinema-player" />
@@ -43,7 +44,7 @@
 </div>
 <!-- end of empty elements created so svelte doesn't purge the css -->
 
-<div bind:this={player}></div>
+<div bind:this={playerElement}></div>
 
 <style lang="postcss">
 @import 'asciinema-player/dist/bundle/asciinema-player.css';
