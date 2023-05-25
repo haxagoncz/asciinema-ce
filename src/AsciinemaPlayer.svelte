@@ -44,7 +44,7 @@
 </div>
 <!-- end of empty elements created so svelte doesn't purge the css -->
 
-<div bind:this={playerElement}></div>
+<div bind:this={playerElement} style:isolation="isolate"></div>
 
 <style lang="postcss">
 @import 'asciinema-player/dist/bundle/asciinema-player.css';
