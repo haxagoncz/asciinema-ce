@@ -1,8 +1,8 @@
 {
   "name": "asciinema-player-ce",
   "version": "0.2.0",
-  "main": "lib/asciinema-player.iife.js",
-  "types": "index.d.ts",
+  "packageManager": "pnpm@7.12.1",
+  "license": "MIT",
   "exports": {
     ".": {
       "types": "./index.d.ts",
@@ -10,20 +10,24 @@
     },
     "./package.json": "./package.json"
   },
+  "main": "lib/asciinema-player.iife.js",
+  "types": "index.d.ts",
   "scripts": {
     "build": "rollup -c",
     "check": "svelte-check --tsconfig ./tsconfig.json",
-    "bump": "bumpp --push --commit 'chore(release): %s' --tag '%s'"
+    "bump": "bumpp --push --commit 'chore(release): %s' --tag '%s'",
+    "eslint": "eslint"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.39.3",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^14.1.0",
     "@rollup/plugin-typescript": "^8.5.0",
     "@tsconfig/svelte": "^3.0.0",
     "@vospel/eslint-config": "^1.4.9",
-    "asciinema-player": "^3.0.1",
+    "asciinema-player": "^3.4.0",
     "bumpp": "^8.2.1",
-    "eslint": "^8.24.0",
+    "eslint": "^8.41.0",
     "postcss": "^8.4.16",
     "postcss-import": "^15.0.0",
     "rollup": "^2.3.4",
@@ -34,7 +38,5 @@
     "svelte-preprocess": "^4.0.0",
     "tslib": "^2.0.0",
     "typescript": "^4.0.0"
-  },
-  "packageManager": "pnpm@7.12.1",
-  "license": "MIT"
+  }
 }

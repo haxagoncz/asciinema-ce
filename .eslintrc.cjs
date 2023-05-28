@@ -1,4 +1,3 @@
-
 module.exports = {
   root: true,
   env: {
@@ -6,7 +5,7 @@ module.exports = {
     browser: true,
   },
   extends: [
-    '@vospel',
+    '@antfu',
   ],
   rules: { '@typescript-eslint/no-for-in-array': ['off'] },
   ignorePatterns: ['lib'],

@@ -40,6 +40,12 @@
         </span>
       </div>
     </div>
+    <pre class={emptyString}>
+      <div class={emptyString} />
+      </pre>
+    <span class={emptyString}>
+      <span class={emptyString}>
+    </span>
   </div>
 </div>
 <!-- end of empty elements created so svelte doesn't purge the css -->
