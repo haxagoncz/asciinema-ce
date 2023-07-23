@@ -10,10 +10,16 @@
 	<link rel='stylesheet' href='/global.css'>
 	<link rel='stylesheet' href='/build/bundle.css'>
 
-	<script defer src='../lib/asciinema-player.iife.js'></script>
+	<script src='../lib/asciinema-player.iife.js'>
+	</script>
+	<script defer>
+		asciinemaPlayerCE.useAsciinemePlayerCe()
+	</script>
 </head>
 
 <body>
-	<asciinema-player src="28307"></asciinema-player>
+	<div style="width: 800px;">
+		<asciinema-player src="28307"></asciinema-player>
+	</div>
 </body>
 </html>

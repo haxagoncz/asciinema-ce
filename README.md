@@ -13,15 +13,20 @@ pnpm i asciinema-player-ce
 yarn add asciinema-player-ce
 ```
 
-and import it later using
+import it and use it to define a custom element on your window.
 ```js
-import 'asciinema-player-ce'
+import { useAsciinemaCe } from 'asciinema-player-ce'
+
+useAsciinemaCe()
 ```
 
 ### html
 Add the following script to your document
 ```
 <script src="https://cdn.jsdelivr.net/npm/asciinema-player-ce@latest/lib/asciinema-player.iife.min.js"></script>
+<script defer>
+  asciinemaPlayerCe.useAsciinemaCe()
+</script>
 ```
 
 ## Usage

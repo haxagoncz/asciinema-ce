@@ -1,42 +1,33 @@
 {
   "name": "asciinema-player-ce",
   "version": "0.2.1",
-  "packageManager": "pnpm@7.12.1",
+  "packageManager": "pnpm@8.6.9",
   "license": "MIT",
   "exports": {
     ".": {
-      "types": "./index.d.ts",
       "default": "./lib/asciinema-player.iife.js"
     },
     "./package.json": "./package.json"
   },
   "main": "lib/asciinema-player.iife.js",
-  "types": "index.d.ts",
   "scripts": {
     "build": "rollup -c",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
     "bump": "bumpp --push --commit 'chore(release): %s' --tag '%s'",
     "eslint": "eslint"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.3",
-    "@rollup/plugin-commonjs": "^22.0.2",
-    "@rollup/plugin-node-resolve": "^14.1.0",
-    "@rollup/plugin-typescript": "^8.5.0",
-    "@tsconfig/svelte": "^3.0.0",
-    "@vospel/eslint-config": "^1.4.9",
-    "asciinema-player": "^3.4.0",
-    "bumpp": "^8.2.1",
-    "eslint": "^8.41.0",
-    "postcss": "^8.4.16",
-    "postcss-import": "^15.0.0",
-    "rollup": "^2.3.4",
-    "rollup-plugin-svelte": "^7.0.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "svelte": "^3.0.0",
-    "svelte-check": "^2.0.0",
-    "svelte-preprocess": "^4.0.0",
-    "tslib": "^2.0.0",
-    "typescript": "^4.0.0"
+    "@rollup/plugin-commonjs": "^25.0.3",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "asciinema-player": "^3.5.0",
+    "bumpp": "^9.1.1",
+    "esbuild": "^0.18.16",
+    "eslint": "^8.45.0",
+    "rollup": "^3.26.3",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-esbuild": "^5.0.0",
+    "rollup-plugin-import-css": "^3.3.1",
+    "tslib": "^2.6.0",
+    "typescript": "^5.1.6"
   }
 }
