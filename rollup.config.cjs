@@ -12,6 +12,22 @@ const banner = `/*!
 module.exports = [{
   input: 'src/main.ts',
   output: {
+    format: 'esm',
+    file: 'lib/asciinema-player.mjs',
+    banner,
+  },
+  plugins: [
+    resolve({
+      browser: true,
+    }),
+    commonjs(),
+    esbuild(),
+    css(),
+  ],
+},
+{
+  input: 'src/main.ts',
+  output: {
     format: 'iife',
     name: 'asciinemaPlayerCE',
     file: 'lib/asciinema-player.iife.js',

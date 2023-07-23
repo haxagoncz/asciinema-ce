@@ -5,13 +5,17 @@
   "license": "MIT",
   "exports": {
     ".": {
-      "default": "./lib/asciinema-player.iife.js",
+      "default": "./lib/asciinema-player.mjs",
+      "browser": "./lib/asciinema-player.iife.mjs",
       "types": "./lib/asciinema-player.d.ts"
     },
     "./package.json": "./package.json"
   },
-  "main": "lib/asciinema-player.iife.js",
+  "main": "lib/asciinema-player.mjs",
+  "module": "lib/asciinema-player.mjs",
   "types": "lib/asciinema-player.d.ts",
+  "jsdelivr": "./lib/asciinema-player.iife.mjs",
+  "unpkg": "./lib/asciinema-player.iife.mjs",
   "scripts": {
     "build": "rollup -c",
     "bump": "bumpp --push --commit 'chore(release): %s' --tag '%s'",
