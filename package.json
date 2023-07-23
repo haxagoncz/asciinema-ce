@@ -5,11 +5,13 @@
   "license": "MIT",
   "exports": {
     ".": {
-      "default": "./lib/asciinema-player.iife.js"
+      "default": "./lib/asciinema-player.iife.js",
+      "types": "./lib/asciinema-player.d.ts"
     },
     "./package.json": "./package.json"
   },
   "main": "lib/asciinema-player.iife.js",
+  "types": "lib/asciinema-player.d.ts",
   "scripts": {
     "build": "rollup -c",
     "bump": "bumpp --push --commit 'chore(release): %s' --tag '%s'",
