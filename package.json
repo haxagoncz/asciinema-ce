@@ -1,6 +1,6 @@
 {
   "name": "asciinema-player-ce",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "packageManager": "pnpm@8.6.9",
   "license": "MIT",
   "exports": {
