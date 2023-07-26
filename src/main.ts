@@ -63,5 +63,6 @@ export class AsciinemaPlayer extends HTMLElement {
 
 export function useAsciinemePlayerCe() {
   const wind = typeof window !== 'undefined' ? window : undefined
-  wind?.customElements?.define('asciinema-player', AsciinemaPlayer)
+  if (!wind?.customElements?.get('asciinema-player'))
+    wind.customElements.define('asciinema-player', AsciinemaPlayer)
 }
